@@ -1,0 +1,25 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='description', content=description)
+        title #{title}
+
+        if htmlWebpackPlugin.options.links
+            each l in htmlWebpackPlugin.options.links
+                link(rel="stylesheet", href=l)
+                block head
+
+    body(class=pageClass)
+
+        include ../includes/modules/header
+        block content
+        include ../includes/modules/footer
+
+        if htmlWebpackPlugin.options.scripts
+            each s in htmlWebpackPlugin.options.scripts
+                script(src=s)
+                block script

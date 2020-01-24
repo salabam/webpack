@@ -1,0 +1,12 @@
+extends ../layout/main
+
+block variables
+    - const title = 'title';
+    - const description = 'Description for webpack';
+    - const pageClass = 'index-page';
+
+block content
+    .container
+        +list('test', [['#link1', 'Link 1'], ['#link2', 'Link 2'], ['#link3', 'Link 3']])
+            
+block script

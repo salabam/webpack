@@ -1,0 +1,5 @@
+mixin list(listClass, content)
+    ul(class=listClass)
+        each c in content
+            li(class=listClass + '__item')
+                a(class=listClass + '__link', href=c[0])= c[1]

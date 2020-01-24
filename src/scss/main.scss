@@ -1,0 +1,63 @@
+@import "utils/libs";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+html {
+    line-height: $mainLineHeight;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+    flex: 0 0 auto;
+    position: relative;
+    margin: 0 auto;
+    padding: 0px 16px;
+    max-width: $desktopWidth;
+    @media screen and (min-width: $desktopWidth) {
+        max-width: $desktopWidth;
+    }
+    @media screen and (max-width: $desktopWidth) {
+        max-width: $desktopWidthSM;
+    }
+    @media screen and (max-width: $desktopWidthSM) {
+        max-width: $tabletWidth;
+    }
+    @media screen and (max-width: $tabletWidth) {
+        max-width: $tabletWidthSM;
+    }
+    @media screen and (max-width: $tabletWidthSM) {
+        max-width: $phoneWidth;
+    }
+    @media screen and (max-width: $phoneWidth) {
+        max-width: $phoneWidthSM;
+    }
+}
